@@ -18,9 +18,8 @@ date=$(date +\%F\ \%H:\%M:00)
 
 
 for mount in $mounts ; do
-    outfile=/${mount}/dfsizerep.history
-    # TODO: make this output to stdout if run as non-priv user
-#    outfile=/dev/stdout         # simplest debug
+    outfile=/${mount}/dfsizerep.history     # default design is write logs
+    [ $UID -ne 0 ] && outfile=/dev/stdout   # non-root users get results to stdout
     mount | grep -q " $mount " && ( \
         echo -n "$date," ; df -B1048576 --output=source,size,used,avail,pcent,target $mount \
             | grep -v Filesystem \
