@@ -9,10 +9,11 @@ At one line per day, grows approx 1.5k/month - no rotation likely
 
 
 # Sample output:
-root@galactica:~# tail /home/dfsizerep.history
-2020-06-24 00:00:00,/dev/md1,3096237,1548598,1240947,56%,galactica:/home
-2020-06-25 00:00:00,/dev/md1,3096237,1553799,1235745,56%,galactica:/home
-2020-06-26 00:00:00,/dev/md1,3096237,1557712,1231833,56%,galactica:/home
+root@galactica:~# tail /home/dfsizerep.history 
+2021-03-01 00:00:00,/dev/md1,3096237,1850870,938675,69.68,galactica:/home
+2021-03-02 00:00:00,/dev/md1,3096237,1851168,938376,69.69,galactica:/home
+2021-03-03 00:00:00,/dev/md1,3096237,1851585,937959,69.70,galactica:/home
+
 
 
 # Usage
